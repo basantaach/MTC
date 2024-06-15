@@ -1,0 +1,146 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.nbl-page {
+  max-width: 100%;
+  margin: 0;
+  padding: 10px; /* Adjusted padding */
+}
+
+.nbl-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nbl-header-title {
+  font-size: 2em;
+  margin: 0;
+}
+
+.nbl-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px; /* Adjusted space between the image slider and description */
+}
+
+.nbl-image {
+  width: 300px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nbl-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nbl-images {
+  flex: 1 1 30%; /* Adjust the width of product images */
+  padding: 10px; /* Adjusted padding */
+}
+
+.nbl-description {
+  flex: 1 1 60%; /* Adjust the width of product description */
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Align text to the left */
+  gap: 10px; /* Adjusted space between description and features */
+  padding: 10px; /* Adjusted padding */
+}
+
+.nbl-specs-and-features {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* Adjusted space between specifications and features sections */
+}
+
+.nbl-specifications,
+.nbl-features {
+  flex: 1 1 50%; /* Adjust the width of each section */
+}
+
+.nbl-description h2 {
+  margin-bottom: 10px;
+}
+
+.nbl-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nbl-description li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px; /* Space for the dash */
+}
+
+.nbl-description li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 1200px) {
+  .nbl-details {
+    flex-direction: column;
+  }
+  .nbl-images,
+  .nbl-description {
+    flex: 1 1 100%;
+    padding: 10px; /* Adjusted padding */
+  }
+  .nbl-images .image-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .nbl-images .image-row div {
+    flex: 1 1 50%;
+    padding: 5px;
+  }
+  .nbl-specs-and-features {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .nbl-header-title {
+    font-size: 1.5em;
+  }
+  .nbl-images,
+  .nbl-description {
+    flex: 1 1 100%;
+    padding: 10px; /* Adjusted padding */
+  }
+  .nbl-images .image-row div {
+    flex: 1 1 100%;
+  }
+  .nbl-details {
+    gap: 10px; /* Adjusted gap */
+  }
+  .nbl-description ul {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nbl-header-title {
+    font-size: 1.2em;
+  }
+  .nbl-images .image-row div {
+    flex: 1 1 100%;
+    padding: 5px;
+  }
+  .nbl-description ul {
+    padding-left: 15px;
+  }
+}

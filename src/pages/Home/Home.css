@@ -1,0 +1,35 @@
+/* Text Header */
+.text-header {
+  position: absolute;
+  top: 10%; /* Adjust as needed to position the text header */
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  text-align: center;
+  background-color: none; /* Background for readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: none; /* Subtle shadow for depth */
+}
+
+.text-header .p-3 {
+  padding: 20px;
+  max-width: 900px;
+}
+
+/* Headings and Paragraph */
+.text-header h1 {
+  font-size: 3.5rem; /* Adjust font size as needed */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(9, 0, 0, 0.7); /* Text shadow for contrast */
+  background: white; /* Gradient text */
+  -webkit-background-clip: text;
+}
+
+.text-header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for contrast */
+}

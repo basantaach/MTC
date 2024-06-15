@@ -1,0 +1,209 @@
+/* Section.css */
+
+/* General section styling */
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  background-color: rgb(245, 245, 247);
+}
+
+.bgHeading {
+  background-color: rgb(245, 245, 247);
+}
+
+.heading h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(to right, #1e90ff, #00bfff, #b5ef2d, #2dc152);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Products slider styling */
+.products-slider {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 80%;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+.product-item-box {
+  flex: 0 0 calc(50% - 15px); /* Two items per row on larger screens */
+  padding: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px; /* Add margin between boxes */
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1em; /* Adjust button font size */
+  font-weight: bold;
+  background: linear-gradient(to bottom, #d16ba5, #86a8e7, #5ffbf1);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 12px 34px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.product-button:hover {
+  background: black;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Slider dots and arrows styling */
+.slick-slider {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: "";
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  /* display: block; */
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-vertical .slick-slide {
+  display: none;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1200px) {
+  .products-slider {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-item-box {
+    flex: 0 0 calc(50% - 15px); /* Two items per row on medium screens */
+    margin-bottom: 20px; /* Adjust margin between boxes */
+  }
+}
+
+@media (max-width: 768px) {
+  .products-slider {
+    width: 95%;
+  }
+
+  .product-item-box {
+    flex: 0 0 calc(50% - 15px); /* Two items per row on smaller screens */
+    margin-bottom: 15px; /* Adjust margin between boxes */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-item-box {
+    flex: 0 0 100%; /* Full width on extra small screens, one item per row */
+    margin-bottom: 10px; /* Adjust margin between boxes */
+  }
+}

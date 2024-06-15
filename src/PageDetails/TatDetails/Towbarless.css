@@ -1,0 +1,149 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.product-page {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+
+.product-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-header-title {
+  font-size: 2em;
+  margin: 0;
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Adjust space between the image slider and description */
+}
+
+.product-images {
+  flex: 1 1 30%; /* Adjust the width of product images */
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.product-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-description {
+  flex: 1 1 60%; /* Adjust the width of product description */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Align text to the left */
+  gap: 20px; /* Space between description and features */
+}
+
+.specs-and-features {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Space between specifications and features sections */
+}
+
+.specifications,
+.features {
+  flex: 1 1 50%; /* Adjust the width of each section */
+}
+
+.product-description h2 {
+  margin-bottom: 10px;
+}
+
+.product-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-description li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px; /* Space for the dash */
+}
+
+.product-description li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 1200px) {
+  .product-details {
+    flex-direction: column;
+  }
+  .product-images,
+  .product-description {
+    flex: 1 1 100%;
+  }
+  .image-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .image-row div {
+    flex: 1 1 50%;
+    padding: 5px;
+  }
+  .specs-and-features {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-header-title {
+    font-size: 1.5em;
+  }
+  .product-images,
+  .product-description {
+    flex: 1 1 100%;
+  }
+  .image-row div {
+    flex: 1 1 100%;
+  }
+  .product-details {
+    gap: 10px;
+  }
+  .product-description ul {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-header-title {
+    font-size: 1.2em;
+  }
+  .image-row div {
+    flex: 1 1 100%;
+    padding: 5px;
+  }
+  .product-description ul {
+    padding-left: 15px;
+  }
+}

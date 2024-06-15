@@ -1,0 +1,64 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-form,
+.contact-map {
+  flex: 1;
+}
+.submitButton {
+  display: inline-block;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: white;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.submitButton:hover {
+  border: 1px solid black;
+  background: black;
+  color: white;
+  transition: 1s;
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+  }
+}
+
+.contact-form {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.headingContact {
+  font-size: 2.25rem; /* equivalent to xl size */
+  font-weight: 600;
+  /* equivalent to mb={4} */
+  text-align: center;
+  padding-top: 20px;
+}
+/* .headingContact */

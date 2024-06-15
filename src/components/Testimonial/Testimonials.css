@@ -1,0 +1,102 @@
+.testimonials-container {
+  background-color: rgb(245, 245, 247); /* Light background */
+  color: #333; /* Dark text color for better contrast */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.backgroundHeader {
+  background-color: rgb(
+    245,
+    245,
+    247
+  ); /* Set the background color of the header Appointment */
+}
+
+.testimonials-container h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjust height as needed */
+  padding: 20px 10px;
+}
+
+.testimonial-box {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc; /* Light border for contrast */
+  border-radius: 10px;
+  background-color: white; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.testimonial-text {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimonial-position {
+  font-size: 0.9em;
+  color: #666; /* Slightly darker color for the position text */
+}
+
+/* Media Queries */
+
+/* Medium screens (tablets, 768px and up) */
+@media (max-width: 991px) {
+  .testimonial-box {
+    padding: 15px;
+  }
+}
+
+/* Small screens (phones, 576px and up) */
+@media (max-width: 767px) {
+  .testimonial-box {
+    max-width: 100%;
+  }
+
+  .testimonial-text {
+    font-size: 1.1em;
+  }
+
+  .testimonial-author {
+    font-size: 1.1em;
+  }
+
+  .testimonial-position {
+    font-size: 0.8em;
+  }
+}
+
+/* Extra small screens (phones, less than 576px) */
+@media (max-width: 575px) {
+  .testimonial-text {
+    font-size: 1em;
+  }
+
+  .testimonial-author {
+    font-size: 1em;
+  }
+
+  .testimonial-position {
+    font-size: 0.7em;
+  }
+
+  .testimonials-container h2 {
+    font-size: 1.5em; /* Adjust header font size for extra small screens */
+  }
+}
